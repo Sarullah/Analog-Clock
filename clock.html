@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+<Fset> MGUYG H               </Fset><head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>clock</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+
+        .box2 {
+            width: 400px;
+            height: 400px;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            z-index: 4;
+            border-radius: 50%;
+            /* border: 1px solid rgb(229, 210, 247); */
+            border: 1px solid rgb(157, 76, 233);
+
+
+        }
+
+        .box3 {
+            width: 370px;
+            height: 370px;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            z-index: 4;
+            border-radius: 50%;
+            border: 1px solid rgb(157, 76, 233);
+
+        }
+
+        .box4 {
+            width: 340px;
+            height: 340px;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            z-index: 4;
+            border-radius: 50%;
+            /* border: 1px solid rgb(157, 76, 233); */
+            border: 1px solid rgb(229, 210, 247);
+
+
+        }
+
+        .box5 {
+            width: 310px;
+            height: 310px;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            z-index: 4;
+            border-radius: 50%;
+            border: 1px solid rgb(157, 76, 233);
+
+        }
+
+        .box6 {
+            width: 280px;
+            height: 280px;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            z-index: 4;
+            border-radius: 50%;
+            border: 1px solid rgb(157, 76, 233);
+            /* border: 1px solid rgb(229, 210, 247); */
+
+
+        }
+
+        .box7 {
+            width: 250px;
+            height: 250px;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            z-index: 4;
+            border-radius: 50%;
+            border: 1px solid rgb(157, 76, 233);
+
+        }
+
+        .box8 {
+            width: 220px;
+            height: 220px;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            z-index: 4;
+            border-radius: 50%;
+            /* border: 1px solid rgb(157, 76, 233); */
+            border: 1px solid rgb(229, 210, 247);
+
+
+        }
+        
+
+        
+        .box9 {
+            width: 190px;
+            height: 190px;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            z-index: 4;
+            border-radius: 50%;
+            border: 1px solid rgb(157, 76, 233);
+
+        }
+        
+
+        
+        .box10 {
+            width: 160px;
+            height: 160px;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            z-index: 4;
+            border-radius: 50%;
+            border: 1px solid rgb(157, 76, 233);
+
+        }
+        
+        #clock {
+            border: 20px solid rgb(126, 126, 125);
+            box-sizing: content-box;
+            box-shadow: 10px 10px 40px 1px rgb(80, 80, 80);
+        }
+
+        #clock .number {
+            --rotation:0;
+            position: absolute;
+            width: calc(100% - 7px);
+            height: 100%;
+            text-align: center;
+            transform: rotate(var(--rotation));
+            font-size: 20px;
+            padding: 15px;
+            /* margin-top: 10px; */
+            font-weight: 600;
+            color: rgb(69, 4, 131);
+            /* border: 1px solid rgb(44, 44, 44) ; */
+
+        }
+
+        #clock .number1 {--rotation:30deg;}
+        #clock .number2 {--rotation:60deg;}
+        #clock .number3 {--rotation:90deg;}
+        #clock .number4 {--rotation:120deg;}
+        #clock .number5 {--rotation:150deg;}
+        #clock .number6 {--rotation:180deg;}
+        #clock .number7 {--rotation:210deg;}
+        #clock .number8 {--rotation:240deg;}
+        #clock .number9 {--rotation:270deg;}
+        #clock .number10 {--rotation:300deg;}
+        #clock .number11 {--rotation:330deg;}
+        #clock .number12 {--rotation:360deg;}
+
+
+
+        #clock .hand {
+            --rotation:0;
+            position: absolute;
+            bottom: 50%;
+            left: 50%;
+            width: 10px;
+            height: 50%;
+            background-color: black;
+            border: 1px solid white;
+            border-top-left-radius: 20px;
+            border-top-right-radius: 20px;
+            transform-origin: bottom;
+            z-index: 10;
+            transform: translateX(-50%) rotate(calc(var(--rotation) * 1deg));
+        }
+
+        #clock::after {
+            content: "";
+            position: absolute;
+            background-color: rgb(61, 56, 56);
+            z-index: 11;
+            width: 18px;
+            height: 18px;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            border-radius: 50%;
+
+
+        }
+
+        #clock .hand.sec {
+            width: 4.5px;
+            height: 42%;
+            background-color:rgb(126, 126, 125);
+            /* z-index: 15; */
+        }
+
+        
+        #clock .hand.min {
+            width: 6.5px;
+            height: 40%;
+            background-color: rgb(126, 126, 125);
+
+            /* z-index: 13; */
+        }
+
+        
+        #clock .hand.hour {
+            width: 9px;
+            height: 35%;
+            background-color: rgb(126, 126, 125);
+
+            /* z-index: 12; */
+        }
+    </style>
+</head> 
+<body>
+    <div id="container">
+        
+        <div id="clock">
+            <div class="box2"></div>
+        <!-- <div class="box3"></div> -->
+        <div class="box4"></div>
+        <!-- <div class="box5"></div> -->
+        <div class="box6"></div>
+        <!-- <div class="box7"></div> -->
+        <div class="box8"></div>
+        <!-- <div class="box9"></div> -->
+        <div class="box10"></div>
+            <div class="hand hour" data-hour-hand></div>
+            <div class="hand min" data-min-hand></div>
+            <div class="hand sec" data-sec-hand></div>
+
+            <div class="number number1">1</div>
+            <div class="number number2">2</div>
+            <div class="number number3">3</div>
+            <div class="number number4">4</div>
+            <div class="number number5">5</div>
+            <div class="number number6">6</div>
+            <div class="number number7">7</div>
+            <div class="number number8">8</div>
+            <div class="number number9">9</div>
+            <div class="number number10">10</div>
+            <div class="number number11">11</div>
+            <div class="number number12">12</div>
+        </div>
+    </div>
+
+
+
+
+    <script src="clock.js"></script>
+</body>
+</html>
